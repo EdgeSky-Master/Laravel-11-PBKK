@@ -10,8 +10,11 @@
 <body>
     <a href="/">Home</a>
     <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+    
     <h1>About Page</h1>
-    <h3>Owner: <?= $owner; ?></h2>
+    <h3>Owner: {{ $owner }}</h2>
     <img src="img/logo-its.png" alt="">
 </body>
 </html>
