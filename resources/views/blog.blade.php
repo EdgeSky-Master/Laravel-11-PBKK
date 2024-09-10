@@ -12,16 +12,22 @@
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
     <a href="/contact">Contact</a>
+    <article>
+        <h1>Cars</h1>
+        <pre>
+    This is an article about car, what is a car? how can something called ' its a car! ' 
+have you ever wondered like, what if the thing that i call a car isn't actually a car at all?
+In this article, we will.....
+        </pre>
+    </article>
     
-    <h1>Cars</h1>
-    <pre>This is an article about car, what is a car? how can something called ' its a car! ' 
-        have you ever wondered like, what if the thing that i call a car isn't actually a car at all?
-        In this article, we will.....
-    </pre>
-
-    <h1>Planes</h1>
-    <pre>This is an article about planes, what is a plane? how can something called ' its a plane! ' 
-        have you ever wondered like, what if the thing that i call a plane isn't actually a plane at all?
-        In this article, we will.....
+    <article>
+        <h1>Planes</h1>
+        <pre>
+    This is an article about planes, what is a plane? how can something called ' its a plane! ' 
+have you ever wondered like, what if the thing that i call a plane isn't actually a plane at all?
+In this article, we will.....
+        </pre>
+    </article>
 </body>
 </html>
