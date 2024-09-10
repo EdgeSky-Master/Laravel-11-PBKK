@@ -11,6 +11,7 @@
     <a href="/">Home</a>
     <a href="/about">About</a>
     <h1>About Page</h1>
+    <h3>Owner: Muhammad Yusuf Haidar Khairullah</h2>
     <img src="img/logo-its.png" alt="">
 </body>
 </html>
