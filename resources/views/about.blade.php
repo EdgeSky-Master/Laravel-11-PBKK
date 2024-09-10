@@ -11,7 +11,7 @@
     <a href="/">Home</a>
     <a href="/about">About</a>
     <h1>About Page</h1>
-    <h3>Owner: <?php echo $owner; ?></h2>
+    <h3>Owner: <?= $owner; ?></h2>
     <img src="img/logo-its.png" alt="">
 </body>
 </html>
