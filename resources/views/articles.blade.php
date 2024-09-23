@@ -5,12 +5,12 @@
       
     
     <article class="py-8 max-w-screen-md border-b border-gray-300">
-      <a href="/articles/{{ $post['id'] }}"><h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900 hover:underline">{{ $post ['title'] }}</h2></a>
+      <a href="/articles/{{ $post['slug'] }}"><h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900 hover:underline">{{ $post ['title'] }}</h2></a>
       <div class="text-base text-gray-500">
         <a href="#">{{ $post ['author'] }}</a> | 9 September 2023
       </div>
       <p class="my-4 font-light">{{ Str::limit($post['content'],150) }}</a>
-        <a href="/articles/{{ $post['id'] }}" class="font-medium text-blue-500 hover:underline">Read more &raquo;</a>
+        <a href="/articles/{{ $post['slug'] }}" class="font-medium text-blue-500 hover:underline">Read more &raquo;</a>
     </article>
     @endforeach
   </x-layout>
