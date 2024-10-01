@@ -15,11 +15,12 @@ Route::get('/about', function () {
 });
 
 Route::get('/articles', function () {
-    return view('articles', ['title' => 'Articles', 'articles' => Article::allArticle()]);
+    return view('articles', ['title' => 'Articles', 'articles' => Article::all()]);
 });
 
-Route::get('/articles/{slug}', function ($slug) {
-    $article = Article::findArticle($slug);
+Route::get('/articles/{article:slug}', function (Article $article) {
+
+    // $article = Article::where('slug', $slug)->first(); other way to get article by slug
 
 
     if (!$article) {
