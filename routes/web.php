@@ -33,11 +33,11 @@ Route::get('/articles/{article:slug}', function (Article $article) {
 });
 
 Route::get('/authors/{user:username}', function (User $user) {
-    return view('articles', ['title' => 'Article by ' . $user->name, 'articles' => $user->articles]);
+    return view('articles', ['title' => count($user->articles) . ' Article by ' . $user->name, 'articles' => $user->articles]);
 });
 
 Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('articles', ['title' => 'Article in category ' . $category->name, 'articles' => $category->articles]);
+    return view('articles', ['title' => count($category->articles) . ' Article in category ' . $category->name, 'articles' => $category->articles]);
 });
 
 Route::get('/contact', function () {
