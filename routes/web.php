@@ -32,7 +32,7 @@ Route::get('/articles/{article:slug}', function (Article $article) {
     return view('article', ['title' => 'single article', 'article' => $article]);
 });
 
-Route::get('/authors/{user}', function (User $user) {
+Route::get('/authors/{user:username}', function (User $user) {
     return view('articles', ['title' => 'Article by ' . $user->name, 'articles' => $user->articles]);
 });
 
