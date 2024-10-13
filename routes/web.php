@@ -17,7 +17,9 @@ Route::get('/about', function () {
 });
 
 Route::get('/articles', function () {
-    return view('articles', ['title' => 'Articles', 'articles' => Article::all()]);
+    // $articles = Article::with(['author', 'category'])->latest()->get();
+    $articles = Article::latest()->get();
+    return view('articles', ['title' => 'Articles', 'articles' => $articles]);
 });
 
 Route::get('/articles/{article:slug}', function (Article $article) {
@@ -33,10 +35,12 @@ Route::get('/articles/{article:slug}', function (Article $article) {
 });
 
 Route::get('/authors/{user:username}', function (User $user) {
+    // $articles_from = $user->articles->load('category', 'author');
     return view('articles', ['title' => count($user->articles) . ' Article by ' . $user->name, 'articles' => $user->articles]);
 });
 
 Route::get('/categories/{category:slug}', function (Category $category) {
+    // $articles_from = $category->articles->load('category', 'author');
     return view('articles', ['title' => count($category->articles) . ' Article in category ' . $category->name, 'articles' => $category->articles]);
 });
 

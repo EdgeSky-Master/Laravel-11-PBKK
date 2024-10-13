@@ -11,6 +11,8 @@ class Article extends Model
     protected $fillable = ['title', 'author', 'slug', 'content', 'category_id'];
     use HasFactory;
 
+    protected $with = ['author', 'category'];
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class);
