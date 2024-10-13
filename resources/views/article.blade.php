@@ -5,7 +5,7 @@
       
       <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">{{ $article['title'] }}</h2>
       <div class="text-base text-gray-500">
-        <a href="#">{{ $article['author'] }}</a> | {{ $article->created_at->format('j F Y') }}
+        <a href="/authors/{{ $article->author->id }}">{{ $article->author->name }}</a> | {{ $article->created_at->format('j F Y') }}
       </div>
       <p class="my-4 font-light">{{ $article['content'] }}</a>
         <a href="/articles/" class="font-medium text-blue-500 hover:underline">&laquo;Back to articles</a>
