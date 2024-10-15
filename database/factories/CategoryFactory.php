@@ -17,10 +17,12 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+        $color = ['red', 'blue', 'green', 'yellow'];
         $category_name = fake()->sentence(rand(1, 2), false);
         return [
             'name' => $category_name,
-            'slug' => Str::slug($category_name)
+            'slug' => Str::slug($category_name),
+            'color' => $color[rand(0, 3)]
         ];
     }
 }
